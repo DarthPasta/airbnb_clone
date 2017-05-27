@@ -1,4 +1,10 @@
 <h1>User Index</h1>
 
 <p><%= link_to "Create a new account", users_new_path %></p>
-<p><%= link_to "Login", sessions_new_path %></p>
+
+<% if signed_in? %>
+<p><%= link_to "Logout", logout_path, method: :delete %></p>
+
+<% else %>
+<p><%= link_to "Login", login_path %></p>
+<% end %>
