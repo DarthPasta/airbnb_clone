@@ -1,0 +1,9 @@
+<h1>Create a New Listing</h1>
+
+<%= form_for @listing do |f| %>
+<%= f.text_field :title %>
+<%= f.submit "Create new listing" %>
+<% end %>
+
+
+<p><%= link_to "Back", listings_path %>
