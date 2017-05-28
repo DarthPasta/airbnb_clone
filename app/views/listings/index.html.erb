@@ -1,0 +1,12 @@
+<h1>Listing Index</h1> 
+
+<table>
+<% @listings.each do |l| %>
+	<td>
+	<tr><%= l.title %></tr>
+	<tr><%= link_to " Show ", listing_path(l.id) %></tr>
+	<tr><%= link_to " Edit ", edit_listing_path(l.id) %></tr>
+	<tr><%= link_to " Delete ", listing_path(l.id), action:  "delete" %></tr>
+	</td>
+<% end %>
+</table>
