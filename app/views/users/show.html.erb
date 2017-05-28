@@ -3,4 +3,10 @@
 <p><%= @user.username %></p>
 <p><%= @user.email %></p>
 
+<h3>Your list of booking:</h3>
+<ul><% @user.reservations.each do |r| %>
+<li><%= r.listing.title %></li>
+<% end %>
+</ul>
+
 <p><%= link_to "Back", root_path %></p>
