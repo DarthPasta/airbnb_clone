@@ -5,10 +5,15 @@
 <% @listings.each do |l| %>
 	<li><td>
 			<tr><%= l.title %></tr>
-		<tr><%= link_to " Show ", listing_path(l.id) %></tr>
-		<tr><%= link_to " Edit ", edit_listing_path(l.id) %></tr>
+		<tr><%= link_to " Show ", listing_path(l.id) %></tr> 
+		<tr><%= link_to " Edit ",
+		edit_listing_path(l.id) %></tr>
 		<tr><%= link_to " Book ", book_path(l.id), method: :post, data: {confirm: "Do you wish to proceed with your booking?"} %></tr>
-		<tr><%= link_to " Delete ", listing_path(l.id), method: :delete, data: {confirm: "Are you sure?"} %></tr>
+		<tr><%= link_to " Delete ", listing_path(l.id), method: :delete, data: {confirm: "Are you sure?"} %></tr> </p>
+		<p>Created by:
+		<% if l.user %>
+			<tr><%= l.user.email %></tr>
+		<% end %>
 	</td></li>
 <% end %>
 </ul>
