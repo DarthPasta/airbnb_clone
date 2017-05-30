@@ -10,6 +10,11 @@
 		edit_listing_path(l.id) %></tr>
 		<tr><%= link_to " Book ", book_path(l.id), method: :post, data: {confirm: "Do you wish to proceed with your booking?"} %></tr>
 		<tr><%= link_to " Delete ", listing_path(l.id), method: :delete, data: {confirm: "Are you sure?"} %></tr> </p>
+
+		<% l.taggables.each do |t| %>
+		<p>Tags : <%= t.tag.name %></p>
+		<% end %>
+
 		<p>Created by:
 		<% if l.user %>
 			<tr><%= l.user.email %></tr>
