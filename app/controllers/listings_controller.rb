@@ -8,9 +8,11 @@ class ListingsController < ApplicationController
 	end
 
 	def create 
+		if current_user.id
 		@listing = Listing.create(listing_params)
-		if @listing.save
-			redirect_to listings_path
+		@listing.user_id = current_user.id
+		@listing.save
+		redirect_to listings_path
 		else
 			render 'new'
 		end
@@ -57,6 +59,6 @@ class ListingsController < ApplicationController
 
 	private 
 	def listing_params
-	params.require(:listing).permit(:title)
+	params.require(:listing).permit(:title, :user_id)
 	end
 end
