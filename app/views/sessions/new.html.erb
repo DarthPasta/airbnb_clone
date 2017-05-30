@@ -1,8 +1,6 @@
-<h1>Login Page</h1>
+<div id="clearance" class="sign-in">
+  <h2><%= t(".title") %></h2>
 
-<%= form_for(:session, url: login_path) do |f| %>
-<p>Username : <%= f.text_field :username %></p>
-<p>Email : <%= f.email_field :email %></p>
-<p>Password : <%= f.password_field :password %></p>
-<p><%= f.submit "Login" %></p>
-<% end %>
+  <%= render partial: '/sessions/form' %>
+
+</div>

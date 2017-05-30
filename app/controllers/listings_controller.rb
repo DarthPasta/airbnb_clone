@@ -16,6 +16,19 @@ class ListingsController < ApplicationController
 		end
 	end
 
+	def book 
+		r = Reservation.new
+		if current_user
+			r.user_id = current_user.id 
+			r.listing_id = params[:id]
+			r.save 
+			 redirect_to listings_path 
+
+			 else
+			 	redirect_to root_path
+		 end
+	end
+
 	def show 
 		@listing = Listing.find(params[:id])
 	end 

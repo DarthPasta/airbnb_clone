@@ -7,6 +7,7 @@
 			<tr><%= l.title %></tr>
 		<tr><%= link_to " Show ", listing_path(l.id) %></tr>
 		<tr><%= link_to " Edit ", edit_listing_path(l.id) %></tr>
+		<tr><%= link_to " Book ", book_path(l.id), method: :post, data: {confirm: "Do you wish to proceed with your booking?"} %></tr>
 		<tr><%= link_to " Delete ", listing_path(l.id), method: :delete, data: {confirm: "Are you sure?"} %></tr>
 	</td></li>
 <% end %>
@@ -15,4 +16,4 @@
 
 
 <p><%= link_to "Create new listing", new_listing_path %></p>
-<p><%= link_to "Back", users_path %></p>
+<p><%= link_to "Back", root_path %></p>

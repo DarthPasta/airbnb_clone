@@ -1,10 +1,15 @@
-<h1>Sign Up Page</h1>
+<div id="clearance" class="sign-up">
+  <h2><%= t(".title") %></h2>
 
-<%= form_for @user do |f| %>
-<p>Username : </p><%= f.text_field :username %>
-<p>Email : </p><%= f.text_field :email %>
-<p>Password : </p><%= f.password_field :password %>
-<p><%= f.submit "Sign Up" %></p>
-<% end %>
+  <%= form_for @user do |form| %>
+    <%= render partial: '/users/form', object: form %>
 
-<%= link_to "Back", root_path %>
+    <div class="submit-field">
+      <%= form.submit %>
+    </div>
+
+    <div class="other-links">
+      <%= link_to t(".sign_in"), sign_in_path %>
+    </div>
+  <% end %>
+</div>
