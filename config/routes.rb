@@ -26,8 +26,11 @@ Rails.application.routes.draw do
 
 	resources :listings
     post "/book/:id" => "listings#book", as: "book"
-
 	resources :reservations  
+
+  get "/listings/:id/addtag" => "listings#add_tag", as: "addtag"
+  post "/listings/:id/addingtag" => "listings#adding_tag", as: "addingtag"
+
 
 	get "/auth/:provider/callback" => "sessions#create_from_omniauth"
 

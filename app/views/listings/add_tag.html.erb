@@ -1,0 +1,8 @@
+<h1>Adding tags to <%= @listing.title %></h1>
+
+<%= form_tag(addingtag_path(@listing.id)) do %>
+<%= text_field_tag "name" %> 
+<%= submit_tag "Add Tag" %>
+<% end %>
+
+<%= button_to "Done adding tags", listings_path, :method => "get" %>
