@@ -1,5 +1,7 @@
 <h1>Listing Index</h1> 
 
+<%= will_paginate @listings %>
+<br>
 <table>
 </table>
 <% @listings.each do |l| %>
@@ -11,9 +13,10 @@
 		<tr><%= link_to " Book ", book_path(l.id), method: :post, data: {confirm: "Do you wish to proceed with your booking?"} %></tr>
 		<tr><%= link_to " Delete ", listing_path(l.id), method: :delete, data: {confirm: "Are you sure?"} %></tr> </p>
 
+		<p>Tags: 
 		<% l.taggables.each do |t| %>
-		<p>Tags : <%= t.tag.name %></p>
-		<% end %>
+		<%= t.tag.name %>
+		<% end %></p>
 
 		<p>Created by:
 		<% if l.user %>
@@ -24,6 +27,7 @@
 <% end %>
 </ul>
 </table>
+<%= will_paginate @listings %>
 
 
 <p><%= link_to "Create new listing", new_listing_path %></p>
