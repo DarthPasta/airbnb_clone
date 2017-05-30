@@ -2,4 +2,8 @@
 
 <%= @listing.title %> 
 
+	<% @listing.taggables.each do |t| %>
+		<p>Tags : <%= t.tag.name %></p>
+	<% end %>
+
 <p><%= link_to "Back", listings_path %></p>
