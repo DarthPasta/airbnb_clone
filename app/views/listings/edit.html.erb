@@ -10,7 +10,11 @@
 <h3>Edit Tags</h3>
 <p>Tags currently attached: 
 <% @listing.taggables.each do |l| %>
+	<button type="button" class="btn btn-danger btn-sml">
 	<%= l.tag.name %>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+		</button>
+
 <% end %>
 
 <%= form_tag(addingtag_path(@listing.id)) do %>

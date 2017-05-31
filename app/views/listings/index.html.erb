@@ -15,7 +15,12 @@
 
 		<p>Tags: 
 		<% l.taggables.each do |t| %>
+
+		<button type="button" class="btn btn-success btn-sml">
+		<span class="glyphicon glyphicon-magnet" aria-hidden="true"></span>
 		<%= t.tag.name %>
+		</button>
+
 		<% end %></p>
 
 		<p>Created by:
