@@ -7,16 +7,30 @@
 <% @listings.each do |l| %>
 	<li><td>
 			<tr><%= l.title %></tr>
-		<tr><%= link_to " Show ", listing_path(l.id) %></tr> 
-		<tr><%= link_to " Edit ",
-		edit_listing_path(l.id) %></tr>
-		<tr><%= link_to " Book ", book_path(l.id), method: :post, data: {confirm: "Do you wish to proceed with your booking?"} %></tr>
-		<tr><%= link_to " Delete ", listing_path(l.id), method: :delete, data: {confirm: "Are you sure?"} %></tr> </p>
+		<tr><%= link_to listing_path(l.id), class: "btn btn-success btn-sml" do %>
+		<i class="glyphicon glyphicon-picture"></i> Show	
+		</tr>
+		<% end %>
+
+		<tr><%= link_to edit_listing_path(l.id), class: "btn btn-warning btn-sml" do %>
+		<i class="glyphicon glyphicon-pencil"></i> Edit	
+		</tr>
+		<% end %>
+
+		<tr><%= link_to book_path(l.id), method: :post, data: {confirm: "Do you wish to proceed with your booking?"}, class: "btn btn-primary btn-sml" do %>
+		<i class="glyphicon glyphicon-forward"></i> Book	
+		</tr>
+		<% end %>
+
+		<tr><%= link_to listing_path(l.id), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sml" do %>
+		<i class="glyphicon glyphicon-trash"></i> Delete	
+		</tr>
+		<% end %>
 
 		<p>Tags: 
 		<% l.taggables.each do |t| %>
 
-		<button type="button" class="btn btn-success btn-sml">
+		<button type="button" class="btn btn-info btn-xs">
 		<span class="glyphicon glyphicon-magnet" aria-hidden="true"></span>
 		<%= t.tag.name %>
 		</button>
