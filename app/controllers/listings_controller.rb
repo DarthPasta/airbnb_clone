@@ -39,7 +39,7 @@ class ListingsController < ApplicationController
 			r.user_id = current_user.id 
 			r.listing_id = params[:id]
 			r.save 
-			 redirect_to tag_add_path 
+			 redirect_to listings_path 
 
 			 else
 			 	redirect_to root_path
@@ -56,8 +56,8 @@ class ListingsController < ApplicationController
 
 	def update 
 		@listing = Listing.find(params[:id])
-		@listing = Listing.update(listing_params)
-		redirect_to listings_path
+		@listing.update_attributes(listing_params)
+		redirect_to listing_path
 	end
 
 	def destroy 
