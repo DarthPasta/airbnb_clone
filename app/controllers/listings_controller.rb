@@ -74,7 +74,7 @@ class ListingsController < ApplicationController
 
 	private 
 	def listing_params
-	params.require(:listing).permit(:title, :user_id)
+	params.require(:listing).permit(:title, :user_id, :image)
 	end
 
 	def taggable_params

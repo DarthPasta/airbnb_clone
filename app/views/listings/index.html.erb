@@ -7,6 +7,7 @@
 <% @listings.each do |l| %>
 	<li><td>
 			<tr><%= l.title %></tr>
+			<tr><%= image_tag l.image_url.to_s %></tr>
 		<tr><%= link_to listing_path(l.id), class: "btn btn-success btn-sml" do %>
 		<i class="glyphicon glyphicon-picture"></i> Show	
 		</tr>

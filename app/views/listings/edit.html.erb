@@ -1,6 +1,7 @@
 <h1>Edit Page for <%= @listing.title %></h1>
 
-<%= form_for @listing do |f| %>
+<%= form_for @listing, :html => {:multipart => true} do |f| %>
+<p>Add Image : <%= f.file_field :image %>
 <p>Edit Title : <%= f.text_field :title %></p>
 <%= f.submit "Edit Listing" %>
 <% end %>
