@@ -5,7 +5,7 @@
 
 <h3>Your list of booking:</h3>
 <ul><% @user.reservations.each do |r| %>
-<li><%= r.listing.title %></li>
+<li><%= r.listing.title if r.listing %></li>
 <% end %>
 </ul>
 
