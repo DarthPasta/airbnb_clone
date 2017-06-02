@@ -33,11 +33,17 @@ class ListingsController < ApplicationController
 		redirect_to addtag_path(@listing.id)
 	end
 
+	def new_booking 
+		@listing = Listing.find(params[:id])
+		@reservation = Reservation.new
+	end
+
 	def book 
 		r = Reservation.new
 		if current_user
 			r.user_id = current_user.id 
 			r.listing_id = params[:id]
+			r.booking_date = params[:booking_date]
 			r.save 
 			 redirect_to listings_path 
 

@@ -1,0 +1,6 @@
+<h1>Booking Page for <%= @listing.title %></h1>
+
+<%= form_tag(book_path(@listing.id)) do %>
+<%= date_field_tag "booking_date" %> 
+<%= submit_tag "Proceed with booking" %>
+<% end %>

@@ -25,7 +25,8 @@ Rails.application.routes.draw do
 	# delete '/logout' => 'sessions#destroy'
 
 	resources :listings
-    post "/book/:id" => "listings#book", as: "book"
+    get "listings/:id/new_booking" => "listings#new_booking", as: "new_booking"
+    post "listings/:id/book" => "listings#book", as: "book"
 	resources :reservations  
 
   get "/listings/:id/addtag" => "listings#add_tag", as: "addtag"

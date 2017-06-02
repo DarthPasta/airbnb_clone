@@ -29,17 +29,19 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'jquery-ui-rails'
+gem 'jquery-rails'
 
 gem 'figaro'
 
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+gem 'mini_magick'
+
 gem 'carrierwave'
 
 gem 'bootstrap-sass', '~> 3.3.5'
-gem 'sass-rails', '~> 5.0'
+
 gem 'autoprefixer-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

@@ -1,0 +1,6 @@
+<h1>Booking Page for <%= @listing.title %></h1>
+
+<%= form_for @reservation, book_path(@listing.id), method: :post do |r| %>
+<%= r.date_field :booking_date %>
+<%= r.submit "Proceed with Booking" %> 
+<% end %> 

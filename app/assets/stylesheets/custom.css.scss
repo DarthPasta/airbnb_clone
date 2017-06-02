@@ -5,9 +5,33 @@ a.navbar-brand {
 
 img.brand_img {
 	height: 40px;
-	margin-top: 6px;	
+	margin-top: 6px;
+	z-index: -1;	
 }
 
+img.image-container {
+	height: 400px;
+    width: 320px;
+    margin-bottom: 3px;
+	display: block;
+	border: 1px black solid;
+	border-radius: 5px;
+}
+
+span.listing-title {
+    color: steelblue;
+    font-size: 30px;
+    font-family: Impact, Charcoal, sans-serif;
+    }
+
+h2.intro {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+    }
+
+td.listing-table {
+	
+}
 
 
 @import "bootstrap-sprockets";
