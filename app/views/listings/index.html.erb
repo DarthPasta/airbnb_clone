@@ -19,7 +19,7 @@
 		</tr>
 		<% end %>
 
-		<tr><%= link_to book_path(l.id), method: :post, data: {confirm: "Do you wish to proceed with your booking?"}, class: "btn btn-primary btn-sml" do %>
+		<tr><%= link_to new_booking_path(l.id),  class: "btn btn-primary btn-sml" do %>
 		<i class="glyphicon glyphicon-forward"></i> Book	
 		</tr>
 		<% end %>

@@ -2,5 +2,7 @@
 
 <%= form_tag(book_path(@listing.id)) do %>
 <%= date_field_tag "booking_date" %> 
-<%= submit_tag "Proceed with booking" %>
+<%= submit_tag "Proceed with booking", data: {confirm: "Confirm booking?"} %>
 <% end %>
+
+<%= link_to "Back", listings_path %>
