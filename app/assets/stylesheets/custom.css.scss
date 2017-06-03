@@ -1,10 +1,57 @@
+div#nav-bar {
+	display: inline-flex;
+    width: 100%;
+}
+
+div.nav-bar-left {
+	
+}
+
+div.nav-bar-right {
+	position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+div.nav-bar-right-content {
+	float: right;
+    display: inline-flex;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+div.nav-bar-right-content p a {
+	float: right;
+	margin: auto;
+    font-size: 15px;
+    margin-right: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
+    padding-bottom: 10px;
+    border-bottom: 1px white solid;
+    text-decoration : none;
+	
+}
+
+div.nav-bar-right-content p a:hover {
+	border-bottom: 1px black solid;
+}
+
+div.yield {
+	margin: 0 auto;
+    width: 75%;
+    clear: both;
+    margin-top: 40px;
+}
+
+
 a.navbar-brand {
 	padding: 0px;
 }
 
 
 img.brand_img {
-	height: 40px;
+	height: 70px;
+	width: 110px;
 	margin-top: 6px;
 	z-index: -1;	
 }
@@ -27,6 +74,7 @@ span.listing-title {
 h2.intro {
     font-family: "Courier New", Courier, monospace;
     font-size: 25px;
+    width: 450px;
     }
 
 td.listing-table {

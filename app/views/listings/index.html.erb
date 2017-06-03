@@ -3,12 +3,14 @@
 <%= will_paginate @listings %>
 <br>
 
+<div class="listing-container">
 <% @listings.each do |l| %>
+	<div class="listing-content">
 	<table>
 		<td>
+
 			<tr><span class="listing-title"><%= l.title %></span></tr>
 			<tr><%= image_tag l.image, class: "image-container"%></tr>
-			</div>
 		<tr><%= link_to listing_path(l.id), class: "btn btn-success btn-sml" do %>
 		<i class="glyphicon glyphicon-picture"></i> Show	
 		</tr>
@@ -26,8 +28,9 @@
 
 		<tr><%= link_to listing_path(l.id), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger btn-sml" do %>
 		<i class="glyphicon glyphicon-trash"></i> Delete	
-		</tr>
+		</tr></td>
 		<% end %>
+		</table>
 
 		<p>Tags: 
 		<% l.taggables.each do |t| %>
@@ -44,11 +47,11 @@
 			<tr><%= l.user.email %></tr>
 		<% end %></p>
 		<br>
-	</td>
-	</div>
+
+		</div>
 	<% end %>
-</ul>
-</table>
+</div>
+
 <%= will_paginate @listings %>
 
 
