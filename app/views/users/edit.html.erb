@@ -1,0 +1,8 @@
+<h1>Edit page for <%= @user.email %></h1>
+
+	<%= form_for @user, :html => {:multipart => true} do |f| %> 
+	<%= image_tag @user.avatar_url.to_s %>
+	<%= f.file_field :avatar %>
+	<%= f.text_field :email, type: 'email' %> 
+	<%= f.submit "Edit profile" %>
+	<% end %> 

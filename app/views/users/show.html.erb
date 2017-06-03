@@ -1,5 +1,7 @@
 <h1>Profile Page</h1>
 
+<h3>Avatar : </h3>
+<%= image_tag @user.avatar_url(:thumb).to_s %>
 <h3>Email : </h3>
 <p><%= @user.email %></p>
 
@@ -9,4 +11,5 @@
 <% end %>
 </ul>
 
+<p><%= link_to "Edit", edit_user_path(current_user.id) %></p>
 <p><%= link_to "Back", root_path %></p>

@@ -4,6 +4,8 @@ class User < ApplicationRecord
 	has_many :reservations 
   has_many :listings
 
+  mount_uploader :avatar, AvatarUploader
+
      def password_optional?
       true
     end

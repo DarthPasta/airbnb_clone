@@ -1,7 +1,7 @@
 <h1>Index Page</h1> 
 
  <% if signed_in? %>
- 	<p><%= link_to "Profile Page", "/users/:id", method: :get %></p>
+ 	<p><%= link_to "Profile Page", user_path(current_user.id), method: :get %></p>
       <p><%= button_to "Sign out", sign_out_path, method: :delete %></p>
     <% else %>
       <p><%= link_to "Log in here", sign_in_path %></p>
