@@ -72,13 +72,33 @@ span.listing-title {
     }
 
 h2.intro {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 25px;
-    width: 450px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 40px;
+    width: 600px;
     }
 
 td.listing-table {
 	
+}
+
+span.previous_page.disabled {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a.next_page {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+em.current {
+    margin: 0px 10px;
+}
+
+div.pagination a {
+    margin: 0px 10px;
 }
 
 
