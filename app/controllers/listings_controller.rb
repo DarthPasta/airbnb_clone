@@ -4,6 +4,9 @@ class ListingsController < ApplicationController
 
 	end
 
+	def search 
+	end
+
 	def new 
 		@listing = Listing.new
 	end

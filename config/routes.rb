@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   get "/listings/:id/addtag" => "listings#add_tag", as: "addtag"
   post "/listings/:id/addingtag" => "listings#adding_tag", as: "addingtag"
 
+  get "/listings/search" => "listings#search", :action => 'search', as: "search"
+
 
 	get "/auth/:provider/callback" => "sessions#create_from_omniauth"
 

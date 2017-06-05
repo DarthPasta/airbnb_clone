@@ -1,5 +1,18 @@
 <h2 class="intro"><span style="color: red">Airbnb Book</span> unique homes and experience a city like a local.</h2>
 
+<div class="row">
+  <div class="col-lg-8">
+    <div class="input-group">
+      <input type="text" name="location" class="form-control" placeholder="Search for Location">    
+      <input type="text" name="location" class="form-control" placeholder="How many guests?">
+      <span class="input-group-btn">
+ 		<button class="btn btn-default" type="button">Go!</button> 
+      </span>
+      </div>
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+
+
 <%= will_paginate @listings %>
 <br>
 
