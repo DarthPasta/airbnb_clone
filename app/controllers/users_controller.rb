@@ -22,13 +22,20 @@ class UsersController < ApplicationController
 
 	def create 
 		@user = User.create(user_params)
+
+		respond_to do |format|
 		if @user.save
+			UsersMailer.sample_email(@user).deliver
+
+			format.html {redirect_to @user, notice: 'User was successfully created.'}
+			format.json {render :show, status: :created, location: @user}
 			# flash = [success: "Successfully signed up "]
-			redirect_to root_path
 		else
+			format.html {render :new}
+			format.json {render json: @user.errors, status: :unprocessable_entity}
 			# flash = [error: "Sign up failed"]
-			redirect_to users_new_path
 		end
+	end
 	end
 
 	def show 
